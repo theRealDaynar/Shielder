@@ -39,7 +39,10 @@ facing = 0;
 counter = 0;
 
 //*D added variable to control morter launch speed
-morter_speed = 10
+morter_speed = 10 //min speed
+charge_modifier = 2 //max speed = charge_modifier * morter_speed
+max_charge_time = room_speed * 1.5 
+cur_charge_time = 0
 </string>
           </argument>
         </arguments>
@@ -156,17 +159,27 @@ if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (keyboard_
 
 
 //Daynar added shooting code
+//start charging
+if mouse_check_button(mb_left)
+{
+    if cur_charge_time &lt; max_charge_time
+        cur_charge_time++
+}
 //only shoot if mb left has just been pressed
-if mouse_check_button_pressed(mb_left)
+else if mouse_check_button_released(mb_left)
 {
     //calculate angle
+    var spd = morter_speed * ((charge_modifier - 1) * cur_charge_time/max_charge_time+ 1)
     with(instance_create(x,y,oMorter))
     {
         direction = point_direction(x,y,mouse_x,mouse_y)
-        speed = other.morter_speed
+        speed = spd
         gravity = other.grav
     }
+    cur_charge_time = 0
 }
+else
+    cur_charge_time = 0
 </string>
           </argument>
         </arguments>
@@ -249,6 +262,31 @@ else if (image_index = 8) or (image_index = 9)  //bottom
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///draw charge bar
+if cur_charge_time &gt; 0
+    draw_healthbar(x-50,bbox_bottom+20,x+50,bbox_bottom+30,cur_charge_time / max_charge_time * 100,c_black,c_yellow,c_yellow,0,true,false) 
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>
