@@ -26,6 +26,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fTimer</font>
+  </fonts>
   <objects name="objects">
     <object>objects\objplayer</object>
     <object>objects\objplayer2</object>
@@ -61,6 +64,7 @@
     <object>objects\oMorter</object>
     <object>objects\objmortarfade</object>
     <object>objects\objcheckpoint</object>
+    <object>objects\oTimer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
