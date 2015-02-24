@@ -16,6 +16,7 @@
     <sprite>sprites\turret</sprite>
     <sprite>sprites\bullet</sprite>
     <sprite>sprites\win</sprite>
+    <sprite>sprites\checkpoint</sprite>
     <sprite>sprites\tutorial</sprite>
     <sprite>sprites\stripe</sprite>
     <sprite>sprites\fadein</sprite>
@@ -27,6 +28,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\objplayer</object>
+    <object>objects\objplayer2</object>
     <object>objects\objplayergun</object>
     <object>objects\soontobe</object>
     <object>objects\objwall</object>
@@ -58,6 +60,7 @@
     <object>objects\objfadein</object>
     <object>objects\oMorter</object>
     <object>objects\objmortarfade</object>
+    <object>objects\objcheckpoint</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
@@ -71,6 +74,7 @@
     <room>rooms\level7</room>
     <room>rooms\level8</room>
     <room>rooms\level9</room>
+    <room>rooms\levelEscape</room>
     <room>rooms\leveld</room>
   </rooms>
   <help>
