@@ -20,11 +20,14 @@
     <sprite>sprites\stripe</sprite>
     <sprite>sprites\fadein</sprite>
     <sprite>sprites\sMorter</sprite>
+    <sprite>sprites\MortarFade</sprite>
+    <sprite>sprites\explosion</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\objplayer</object>
+    <object>objects\objplayergun</object>
     <object>objects\soontobe</object>
     <object>objects\objwall</object>
     <object>objects\objwall2</object>
@@ -34,6 +37,7 @@
     <object>objects\objdustr</object>
     <object>objects\objdustl</object>
     <object>objects\objdust</object>
+    <object>objects\objexplosion</object>
     <object>objects\objbulletL</object>
     <object>objects\objbulletR</object>
     <object>objects\objbulletU</object>
@@ -53,9 +57,11 @@
     <object>objects\objstripe</object>
     <object>objects\objfadein</object>
     <object>objects\oMorter</object>
+    <object>objects\objmortarfade</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
+    <room>rooms\test</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
     <room>rooms\level3</room>

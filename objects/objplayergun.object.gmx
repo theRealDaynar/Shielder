@@ -150,6 +150,30 @@ if (!place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('S'))) and (facing =
 if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (facing = 0) {instance_create(x-8,y+32,objdustl)}
 if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('A'))) and (facing = 1) {instance_create(x+8,y+32,objdustr)}
 if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (keyboard_check(ord('A'))) {facing = 2}
+
+
+//Daynar added shooting code
+//start charging
+if mouse_check_button(mb_left)
+{
+    if cur_charge_time &lt; max_charge_time
+        cur_charge_time++
+}
+//only shoot if mb left has just been pressed
+else if mouse_check_button_released(mb_left)
+{
+    //calculate angle
+    var spd = morter_speed * ((charge_modifier - 1) * cur_charge_time/max_charge_time+ 1)
+    with(instance_create(x,y,oMorter))
+    {
+        direction = point_direction(x,y,mouse_x,mouse_y)
+        speed = spd
+        gravity = other.grav
+    }
+    cur_charge_time = 0
+}
+else
+    cur_charge_time = 0
 </string>
           </argument>
         </arguments>
