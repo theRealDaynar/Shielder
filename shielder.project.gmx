@@ -24,12 +24,11 @@
     <sprite>sprites\MortarFade</sprite>
     <sprite>sprites\explosion</sprite>
     <sprite>sprites\glow</sprite>
+    <sprite>sprites\sFont</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <fonts name="fonts">
-    <font>fonts\fTimer</font>
-  </fonts>
+  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\objplayer</object>
     <object>objects\objplayer2</object>
