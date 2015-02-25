@@ -54,7 +54,9 @@ font = TIMER_FONT
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>amounty1=-5+round(random(10))
+            <string>if (end_time - (get_timer() - start_time)) &lt; 0 {room_restart()}
+
+amounty1=-5+round(random(10))
 amountx1=-5+round(random(10))
 view_yview[0]+=amounty1
 view_hview[0]+=amounty1

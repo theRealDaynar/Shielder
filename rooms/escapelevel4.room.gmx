@@ -194,7 +194,7 @@
     <instance objName="objwall2" x="-64" y="768" name="inst_F8EDA1AC" locked="0" code="" scaleX="18" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="1024" y="0" name="inst_439075BA" locked="0" code="" scaleX="1" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="-64" y="0" name="inst_8C35A325" locked="0" code="" scaleX="1" scaleY="12" colour="4294967295" rotation="0"/>
-    <instance objName="oTimer" x="-64" y="-64" name="inst_BEA20369" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTimer" x="-64" y="-64" name="inst_BEA20369" locked="0" code="end_time = 5*1000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

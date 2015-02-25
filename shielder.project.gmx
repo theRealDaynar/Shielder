@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\Vanishing_Point</sound>
+    <sound>sound\Apex_Beat</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
     <sprite>sprites\player</sprite>
@@ -28,10 +31,8 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\objplayer</object>
-    <object>objects\objplayer2</object>
     <object>objects\objplayergun</object>
     <object>objects\soontobe</object>
     <object>objects\objwall</object>
@@ -65,13 +66,11 @@
     <object>objects\objfadein</object>
     <object>objects\oMorter</object>
     <object>objects\objmortarfade</object>
-    <object>objects\objcheckpoint</object>
     <object>objects\oTimer</object>
     <object>objects\objglow</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
-    <room>rooms\test</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
     <room>rooms\level3</room>
@@ -83,6 +82,7 @@
     <room>rooms\level9</room>
     <room>rooms\leveld</room>
     <rooms name="escapelevels">
+      <room>rooms\tut2</room>
       <room>rooms\escapelevel9</room>
       <room>rooms\escapelevel8</room>
       <room>rooms\escapelevel7</room>
@@ -92,6 +92,7 @@
       <room>rooms\escapelevel3</room>
       <room>rooms\escapelevel2</room>
       <room>rooms\escapelevel1</room>
+      <room>rooms\test</room>
     </rooms>
   </rooms>
   <help>

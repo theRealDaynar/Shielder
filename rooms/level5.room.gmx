@@ -175,6 +175,7 @@
     <instance objName="objturretL" x="832" y="512" name="inst_A2A87228" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objturretL" x="832" y="576" name="inst_7EE2AE4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="512" y="704" name="inst_65162FCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTimer" x="0" y="0" name="inst_A3A8C84F" locked="0" code="end_time = 8*1000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
