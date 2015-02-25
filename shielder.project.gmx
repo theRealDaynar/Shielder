@@ -23,6 +23,7 @@
     <sprite>sprites\sMorter</sprite>
     <sprite>sprites\MortarFade</sprite>
     <sprite>sprites\explosion</sprite>
+    <sprite>sprites\glow</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -55,6 +56,8 @@
     <object>objects\objAturretU</object>
     <object>objects\objmturretU</object>
     <object>objects\objturretD</object>
+    <object>objects\objbrknturretD</object>
+    <object>objects\objbrknwall2</object>
     <object>objects\objmturretD</object>
     <object>objects\objwin</object>
     <object>objects\objbulletParent</object>
@@ -65,6 +68,7 @@
     <object>objects\objmortarfade</object>
     <object>objects\objcheckpoint</object>
     <object>objects\oTimer</object>
+    <object>objects\objglow</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
@@ -78,8 +82,18 @@
     <room>rooms\level7</room>
     <room>rooms\level8</room>
     <room>rooms\level9</room>
-    <room>rooms\levelEscape</room>
     <room>rooms\leveld</room>
+    <rooms name="escapelevels">
+      <room>rooms\escapelevel9</room>
+      <room>rooms\escapelevel8</room>
+      <room>rooms\escapelevel7</room>
+      <room>rooms\escapelevel6</room>
+      <room>rooms\escapelevel5</room>
+      <room>rooms\escapelevel4</room>
+      <room>rooms\escapelevel3</room>
+      <room>rooms\escapelevel2</room>
+      <room>rooms\escapelevel1</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
