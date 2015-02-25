@@ -71,6 +71,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
+    <room>rooms\test</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
     <room>rooms\level3</room>
@@ -92,7 +93,6 @@
       <room>rooms\escapelevel3</room>
       <room>rooms\escapelevel2</room>
       <room>rooms\escapelevel1</room>
-      <room>rooms\test</room>
     </rooms>
   </rooms>
   <help>

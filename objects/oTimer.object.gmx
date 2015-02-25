@@ -32,6 +32,7 @@ end_time = seconds * 1000000
 x = room_width/2 //replace with view variables if views are being used
 y = 100
 font = TIMER_FONT
+pulse_modifier = 2
 </string>
           </argument>
         </arguments>
@@ -103,7 +104,9 @@ view_wview[0]+=1}
             <string>draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 draw_set_font(font)
-draw_text_transformed_colour(x,y,(end_time - (get_timer() - start_time))/1000000,4,4,0,c_red,c_red,c_red,c_red,1)
+var time_left = end_time - (get_timer() - start_time)
+var scale = 4 + pulse_modifier * (time_left % 1000000) / 1000000
+draw_text_transformed_colour(x,y,time_left / 1000000,scale,scale,0,c_red,c_red,c_red,c_red,1)
 </string>
           </argument>
         </arguments>
