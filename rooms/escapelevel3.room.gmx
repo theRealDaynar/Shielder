@@ -217,6 +217,10 @@
     <instance objName="objwall2" x="576" y="320" name="inst_45558DD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="576" y="256" name="inst_7EF68E28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objbrknwall2" x="512" y="384" name="inst_4E134E4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objbrknwall2" x="512" y="256" name="inst_BEDBC418" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objbrknwall2" x="448" y="256" name="inst_1DCE8E6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objbrknwall2" x="512" y="320" name="inst_2594E5D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objbrknwall2" x="448" y="320" name="inst_AD647B20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
