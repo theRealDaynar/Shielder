@@ -21,6 +21,8 @@
     <sprite>sprites\win</sprite>
     <sprite>sprites\checkpoint</sprite>
     <sprite>sprites\tutorial</sprite>
+    <sprite>sprites\run</sprite>
+    <sprite>sprites\blackscreen</sprite>
     <sprite>sprites\stripe</sprite>
     <sprite>sprites\fadein</sprite>
     <sprite>sprites\sMorter</sprite>
@@ -64,17 +66,20 @@
     <object>objects\objwin</object>
     <object>objects\objbulletParent</object>
     <object>objects\objTUT</object>
+    <object>objects\objRUN</object>
     <object>objects\objstripe</object>
     <object>objects\objfadein</object>
     <object>objects\oMorter</object>
+    <object>objects\oItem</object>
     <object>objects\objmortarfade</object>
     <object>objects\oTimer</object>
+    <object>objects\objshake</object>
     <object>objects\objglow</object>
     <object>objects\oMovingWall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
-    <room>rooms\test</room>
+    <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
     <room>rooms\level3</room>
@@ -84,7 +89,6 @@
     <room>rooms\level7</room>
     <room>rooms\level8</room>
     <room>rooms\level9</room>
-    <room>rooms\leveld</room>
     <rooms name="escapelevels">
       <room>rooms\tut2</room>
       <room>rooms\escapelevel9</room>
@@ -96,6 +100,9 @@
       <room>rooms\escapelevel3</room>
       <room>rooms\escapelevel2</room>
       <room>rooms\escapelevel1</room>
+      <room>rooms\levelnext</room>
+      <room>rooms\levelmortar</room>
+      <room>rooms\leveld</room>
     </rooms>
   </rooms>
   <help>

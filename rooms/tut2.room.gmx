@@ -12,7 +12,7 @@
   <showcolour>-1</showcolour>
   <code>globalvar TIMER_FONT;
 TIMER_FONT = font_add_sprite_ext(sFont, "1234567890.", false,2)
-audio_stop_sound(Vanishing_Point)
+audio_stop_all()
 audio_play_sound(Apex_Beat, 1, true)</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -54,9 +54,8 @@ audio_play_sound(Apex_Beat, 1, true)</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="objTUT" x="0" y="0" name="inst_8A003654" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objTUT" x="0" y="0" name="inst_7963909E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objstripe" x="-544" y="-512" name="inst_C225826E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRUN" x="0" y="0" name="inst_DCBFC157" locked="0" code="depth = -1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

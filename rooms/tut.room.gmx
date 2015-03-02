@@ -54,7 +54,6 @@ audio_play_sound(Vanishing_Point, 1, true)</code>
   </views>
   <instances>
     <instance objName="objTUT" x="0" y="0" name="inst_8A003654" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objTUT" x="0" y="0" name="inst_7963909E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objstripe" x="-544" y="-512" name="inst_C225826E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
