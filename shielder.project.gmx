@@ -30,7 +30,9 @@
     <sprite>sprites\sFont</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pTest</path>
+  </paths>
   <objects name="objects">
     <object>objects\objplayer</object>
     <object>objects\objplayergun</object>
@@ -68,6 +70,7 @@
     <object>objects\objmortarfade</object>
     <object>objects\oTimer</object>
     <object>objects\objglow</object>
+    <object>objects\oMovingWall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
