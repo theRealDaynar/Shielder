@@ -22,6 +22,7 @@
     <sprite>sprites\checkpoint</sprite>
     <sprite>sprites\tutorial</sprite>
     <sprite>sprites\run</sprite>
+    <sprite>sprites\blackscreen</sprite>
     <sprite>sprites\stripe</sprite>
     <sprite>sprites\fadein</sprite>
     <sprite>sprites\sMorter</sprite>
@@ -67,12 +68,15 @@
     <object>objects\objstripe</object>
     <object>objects\objfadein</object>
     <object>objects\oMorter</object>
+    <object>objects\oItem</object>
     <object>objects\objmortarfade</object>
     <object>objects\oTimer</object>
+    <object>objects\objshake</object>
     <object>objects\objglow</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
+    <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
     <room>rooms\level3</room>
@@ -93,7 +97,8 @@
       <room>rooms\escapelevel3</room>
       <room>rooms\escapelevel2</room>
       <room>rooms\escapelevel1</room>
-      <room>rooms\test</room>
+      <room>rooms\levelnext</room>
+      <room>rooms\levelmortar</room>
       <room>rooms\leveld</room>
     </rooms>
   </rooms>
