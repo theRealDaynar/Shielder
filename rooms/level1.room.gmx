@@ -149,6 +149,7 @@
     <instance objName="objwall2" x="128" y="64" name="inst_9CD2E871" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="64" y="64" name="inst_A7FFD98C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="0" y="0" name="inst_4B2CF98B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oMovingWall" x="192" y="512" name="inst_D55FFD72" locked="0" code="path_start(pTest,3,3,false)&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

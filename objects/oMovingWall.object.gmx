@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>col = false
+locked_down = false
 </string>
           </argument>
         </arguments>
@@ -48,10 +49,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if col = false
-with(objplayer)
-    if place_meeting(x,bbox_bottom+1,other)
-        x += other.x - other.xprevious
+            <string>if locked_down = true
+    with(objplayer)
+    {
+        if vsp &lt; 0 or bbox_right &lt; other.bbox_left or bbox_left &gt; other.bbox_right
+            other.locked_down = false
+        else if other.locked_down = true
+            y = other.bbox_top + (y - bbox_bottom) - 1
+    }
+if col = false
+    with(objplayer)
+    {
+        if place_meeting(x,y+1,other) and other.col = false /*or (place_meeting(x,bbox_bottom+1+y-yprevious,other) /*and vsp &gt;= 0)*/
+        {
+            x += other.x - other.xprevious
+            //y = other.bbox_top + (y - bbox_bottom)
+            other.locked_down = true   
+        }
+    }
 col = false
 </string>
           </argument>
@@ -78,7 +93,9 @@ col = false
             <string>direction = -point_direction(x,y,xprevious,yprevious)
 speed = point_distance(x,y,xprevious,yprevious)
 other.x -= hspeed
-other.y += vspeed + sign(vspeed)
+if locked_down = false
+    other.x -= sign(hspeed)
+other.y += vspeed
 speed = 0
 direction = 0
 col = true
@@ -99,5 +116,8 @@ col = true
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>0,0</point>
+    <point>16,16</point>
+  </PhysicsShapePoints>
 </object>
