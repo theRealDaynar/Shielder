@@ -11,6 +11,7 @@
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
     <sprite>sprites\player</sprite>
+    <sprite>sprites\sFirstBossKillZone</sprite>
     <sprite>sprites\dust</sprite>
     <sprite>sprites\wall2</sprite>
     <sprite>sprites\wall3</sprite>
@@ -35,10 +36,13 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
-    <path>paths\pTest</path>
     <path>paths\boss1</path>
+    <path>paths\boss6</path>
     <path>paths\boss2</path>
     <path>paths\boss3</path>
+    <path>paths\boss4</path>
+    <path>paths\boss5</path>
+    <path>paths\pTest</path>
   </paths>
   <objects name="objects">
     <object>objects\objplayer</object>
@@ -83,8 +87,8 @@
     <object>objects\oMovingWall</object>
     <object>objects\YWN</object>
     <object>objects\YWN2</object>
+    <object>objects\oFirstBossKillzone</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\tut</room>
     <room>rooms\levelboss</room>

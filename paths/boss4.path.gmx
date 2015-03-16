@@ -8,11 +8,15 @@
   <points>
     <point>512,384,100</point>
     <point>160,608,100</point>
+    <point>512,480,100</point>
+    <point>544,480,100</point>
     <point>864,608,100</point>
-    <point>160,384,100</point>
-    <point>864,384,100</point>
-    <point>160,160,100</point>
+    <point>608,384,100</point>
     <point>864,160,100</point>
+    <point>544,288,100</point>
+    <point>512,288,100</point>
+    <point>160,160,100</point>
+    <point>448,384,100</point>
     <point>512,384,100</point>
   </points>
 </path>

@@ -239,7 +239,7 @@ stage = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if stage =  0 {path_start(boss1, 4, 1, false); stage = 1}
+            <string>if stage =  0 {path_start(boss1, 4, 1, true); stage = 1}
 if stage =  2 {path_start(boss1, 6, 1, false); stage = 3}
 if stage =  4 {path_start(boss1, 8, 1, false); stage = 5}
 if stage =  6 {path_start(boss2, 6, 1, false); stage = 7}
@@ -284,70 +284,10 @@ if stage = 12 {path_end(); instance_create(x,y,objexplosion); {alarm[1] = 60}; x
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if stage &lt; 12 {stage += 1}
+            <string>//if stage &lt; 12 {stage += 1}
+randomize()
+path_start(irandom(boss5), 4, 1, 1)
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>721</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_health</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>100</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>723</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_health</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>20</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>980</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1004</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1018</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>5</string>
           </argument>
         </arguments>
       </action>
