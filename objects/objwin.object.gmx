@@ -77,7 +77,7 @@
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>escapelevel1</room>
+            <room>levelboss</room>
           </argument>
         </arguments>
       </action>

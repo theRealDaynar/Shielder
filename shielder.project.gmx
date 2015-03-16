@@ -30,10 +30,15 @@
     <sprite>sprites\explosion</sprite>
     <sprite>sprites\glow</sprite>
     <sprite>sprites\sFont</sprite>
+    <sprite>sprites\sYWN</sprite>
+    <sprite>sprites\sYWN2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
     <path>paths\pTest</path>
+    <path>paths\boss1</path>
+    <path>paths\boss2</path>
+    <path>paths\boss3</path>
   </paths>
   <objects name="objects">
     <object>objects\objplayer</object>
@@ -76,9 +81,13 @@
     <object>objects\objshake</object>
     <object>objects\objglow</object>
     <object>objects\oMovingWall</object>
+    <object>objects\YWN</object>
+    <object>objects\YWN2</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\tut</room>
+    <room>rooms\levelboss</room>
     <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
@@ -101,7 +110,6 @@
       <room>rooms\escapelevel2</room>
       <room>rooms\escapelevel1</room>
       <room>rooms\levelnext</room>
-      <room>rooms\levelmortar</room>
       <room>rooms\leveld</room>
     </rooms>
   </rooms>
