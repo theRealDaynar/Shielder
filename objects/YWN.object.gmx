@@ -56,6 +56,10 @@
             <string>rof = 20
 alarm[0] = rof
 stage = 0
+spd = 4
+turn_speed = 0
+turn_stop = 0
+event_perform(ev_other,ev_end_of_path)
 </string>
           </argument>
         </arguments>
@@ -88,6 +92,40 @@ stage = 0
       </action>
     </event>
     <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>image_angle = 0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>201</id>
@@ -202,6 +240,92 @@ stage = 0
       </action>
       <action>
         <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>421</id>
+        <kind>3</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///diagonal bullets
+var dir = image_angle
+repeat(4)
+{
+    with(instance_create(x + lengthdir_x(18,dir),y + lengthdir_y(18,dir),objbulletU))
+    {
+        direction = dir
+    }
+    dir += 90
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -239,7 +363,19 @@ stage = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if stage =  0 {path_start(boss1, 4, 1, true); stage = 1}
+            <string>if turn_speed != 0
+{
+    image_angle += turn_speed
+    if turn_stop &gt;= 0 and image_angle &gt; turn_stop
+    {
+        image_angle = turn_stop
+        turn_speed = 0
+    }
+}
+
+
+
+/*if stage =  0 {path_start(boss1, 4, 1, true); stage = 1}
 if stage =  2 {path_start(boss1, 6, 1, false); stage = 3}
 if stage =  4 {path_start(boss1, 8, 1, false); stage = 5}
 if stage =  6 {path_start(boss2, 6, 1, false); stage = 7}
@@ -286,7 +422,7 @@ if stage = 12 {path_end(); instance_create(x,y,objexplosion); {alarm[1] = 60}; x
             <kind>1</kind>
             <string>//if stage &lt; 12 {stage += 1}
 randomize()
-path_start(irandom(boss5), 4, 1, 1)
+path_start(irandom(boss5), spd, 1, 1)
 </string>
           </argument>
         </arguments>

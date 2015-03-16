@@ -58,10 +58,26 @@ x = 512
     {
         hp --
         with(YWN)
-            instance_create(bbox_left + random(sprite_width),bbox_top,objexplosion) 
+            instance_create(bbox_left + random(sprite_width),bbox_top,objexplosion)
+        if hp = round(maxhp)*2/3
+        {
+            YWN.turn_speed = 5
+            YWN.turn_stop = 45
+        }
+        else if hp = round(maxhp)/3
+        {
+            YWN.turn_stop = -1
+            YWN.turn_speed = 2
+            YWN.spd *= 2
+        }
     }
     else if spawned = false
+    {
+        with(instance_create(0,0,oTimer))
+            end_time = 90*1000000
+        //instance_create(0,0,objshake)
         spawned = instance_create(512,384,YWN)
+    }
     with(instance_create(bbox_left + random(sprite_width),bbox_top,objdust))
     {
         vspeed = -abs(vspeed)
@@ -97,7 +113,8 @@ else
           <argument>
             <kind>1</kind>
             <string>///draw healthbar
-draw_healthbar(50,700,974,748,hp/maxhp * 100,c_black,c_white,c_white,fa_left,false,false)
+if spawned != false
+    draw_healthbar(50,700,974,748,hp/maxhp * 100,c_black,c_white,c_white,fa_left,false,false)
 </string>
           </argument>
         </arguments>
