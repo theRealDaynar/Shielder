@@ -11,34 +11,6 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>sYWN</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0.1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -56,6 +28,7 @@
             <string>rof = 20
 alarm[0] = rof
 stage = 0
+image_speed = .1
 spd = 4
 turn_speed = 0
 turn_stop = 0
@@ -82,7 +55,7 @@ event_perform(ev_other,ev_end_of_path)
         <arguments>
           <argument>
             <kind>10</kind>
-            <object>YWN2</object>
+            <object>-100</object>
           </argument>
           <argument>
             <kind>4</kind>
@@ -302,6 +275,7 @@ repeat(4)
 {
     with(instance_create(x + lengthdir_x(18,dir),y + lengthdir_y(18,dir),objbulletU))
     {
+        bounce = 1
         direction = dir
     }
     dir += 90
