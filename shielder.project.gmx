@@ -11,6 +11,7 @@
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
     <sprite>sprites\player</sprite>
+    <sprite>sprites\shield</sprite>
     <sprite>sprites\sFirstBossKillZone</sprite>
     <sprite>sprites\dust</sprite>
     <sprite>sprites\wall2</sprite>
@@ -88,6 +89,7 @@
     <object>objects\YWN</object>
     <object>objects\YWN2</object>
     <object>objects\oFirstBossKillzone</object>
+    <object>objects\objshield</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>

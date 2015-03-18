@@ -28,7 +28,6 @@
             <string>spawned = false
 maxhp = room_speed * 30
 hp = maxhp
-x = 512
 </string>
           </argument>
         </arguments>
@@ -66,6 +65,7 @@ x = 512
         }
         else if hp = round(maxhp)/3
         {
+            YWN.rof = 5
             YWN.turn_stop = -1
             YWN.turn_speed = 2
             YWN.spd *= 2
@@ -114,7 +114,7 @@ else
             <kind>1</kind>
             <string>///draw healthbar
 if spawned != false
-    draw_healthbar(50,700,974,748,hp/maxhp * 100,c_black,c_white,c_white,fa_left,false,false)
+    draw_healthbar(50,700,974,748,hp/maxhp * 100,c_black,c_gray,c_gray,fa_left,false,false)
 </string>
           </argument>
         </arguments>
