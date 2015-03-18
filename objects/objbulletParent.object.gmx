@@ -61,6 +61,9 @@
         hspeed *= -1
         vspeed *= -1
     }
+    bounce --
+    if bounce = 0 and sprite_index = bouncebullet
+        sprite_index = bullet
 }
 else
     instance_destroy()

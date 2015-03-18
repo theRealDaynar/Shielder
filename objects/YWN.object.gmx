@@ -276,6 +276,7 @@ repeat(4)
     with(instance_create(x + lengthdir_x(18,dir),y + lengthdir_y(18,dir),objbulletU))
     {
         bounce = 1
+        sprite_index = bouncebullet
         direction = dir
     }
     dir += 90

@@ -20,6 +20,7 @@
     <sprite>sprites\wall5</sprite>
     <sprite>sprites\turret</sprite>
     <sprite>sprites\bullet</sprite>
+    <sprite>sprites\bouncebullet</sprite>
     <sprite>sprites\win</sprite>
     <sprite>sprites\checkpoint</sprite>
     <sprite>sprites\tutorial</sprite>
