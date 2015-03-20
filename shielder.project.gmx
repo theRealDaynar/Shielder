@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\Vanishing_Point</sound>
     <sound>sound\Apex_Beat</sound>
+    <sound>sound\Impossible</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
@@ -105,11 +106,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
-    <room>rooms\level10</room>
-    <room>rooms\level11</room>
-    <room>rooms\level12</room>
-    <room>rooms\level13</room>
-    <room>rooms\levelboss</room>
     <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
@@ -132,6 +128,13 @@
       <room>rooms\escapelevel2</room>
       <room>rooms\escapelevel1</room>
       <room>rooms\levelnext</room>
+      <room>rooms\levelboss</room>
+    </rooms>
+    <rooms name="world2">
+      <room>rooms\level10</room>
+      <room>rooms\level11</room>
+      <room>rooms\level12</room>
+      <room>rooms\level13</room>
       <room>rooms\leveld</room>
     </rooms>
   </rooms>
