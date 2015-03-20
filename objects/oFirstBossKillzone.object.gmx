@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>spawned = false
-maxhp = room_speed * 30
+maxhp = room_speed //* 30
 hp = maxhp
 </string>
           </argument>
@@ -69,6 +69,16 @@ hp = maxhp
             YWN.turn_stop = -1
             YWN.turn_speed = 2
             YWN.spd *= 2
+        }
+        else if hp &lt;= 0
+        {
+            with(YWN)
+                instance_destroy()
+            with(objshake)
+                instance_destroy()
+            with(oTimer)
+                instance_destroy()
+            spawned = id
         }
     }
     else if spawned = false
