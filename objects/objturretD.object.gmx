@@ -53,7 +53,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 60
+            <string>rof = 60
+alarm[0] = rof
 </string>
           </argument>
         </arguments>
@@ -104,7 +105,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 60
+            <string>alarm[0] = rof
 </string>
           </argument>
         </arguments>

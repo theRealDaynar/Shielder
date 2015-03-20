@@ -15,6 +15,7 @@
     <sprite>sprites\sFirstBossKillZone</sprite>
     <sprite>sprites\dust</sprite>
     <sprite>sprites\wall2</sprite>
+    <sprite>sprites\deathwall</sprite>
     <sprite>sprites\wall3</sprite>
     <sprite>sprites\wall4</sprite>
     <sprite>sprites\wall5</sprite>
@@ -35,15 +36,16 @@
     <sprite>sprites\sFont</sprite>
     <sprite>sprites\sYWN</sprite>
     <sprite>sprites\sYWN2</sprite>
+    <sprite>sprites\diag</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
     <path>paths\boss1</path>
-    <path>paths\boss6</path>
     <path>paths\boss2</path>
     <path>paths\boss3</path>
     <path>paths\boss4</path>
     <path>paths\boss5</path>
+    <path>paths\boss6</path>
     <path>paths\pTest</path>
   </paths>
   <objects name="objects">
@@ -63,17 +65,7 @@
     <object>objects\objbulletR</object>
     <object>objects\objbulletU</object>
     <object>objects\objbulletD</object>
-    <object>objects\objturretL</object>
-    <object>objects\objmturretL</object>
-    <object>objects\objturretR</object>
-    <object>objects\objmturretR</object>
-    <object>objects\objturretU</object>
-    <object>objects\objAturretU</object>
-    <object>objects\objmturretU</object>
-    <object>objects\objturretD</object>
-    <object>objects\objbrknturretD</object>
     <object>objects\objbrknwall2</object>
-    <object>objects\objmturretD</object>
     <object>objects\objwin</object>
     <object>objects\objbulletParent</object>
     <object>objects\objTUT</object>
@@ -88,12 +80,32 @@
     <object>objects\objglow</object>
     <object>objects\oMovingWall</object>
     <object>objects\YWN</object>
-    <object>objects\YWN2</object>
     <object>objects\oFirstBossKillzone</object>
     <object>objects\objshield</object>
+    <object>objects\objdeathwall</object>
+    <objects name="turrets">
+      <object>objects\objdiagturret1</object>
+      <object>objects\objdiagturret2</object>
+      <object>objects\objdiagturret3</object>
+      <object>objects\objdiagturret4</object>
+      <object>objects\objdiagturret5</object>
+      <object>objects\objturretL</object>
+      <object>objects\objmturretL</object>
+      <object>objects\objturretR</object>
+      <object>objects\objmturretR</object>
+      <object>objects\objturretU</object>
+      <object>objects\objmturretU</object>
+      <object>objects\objAturretU</object>
+      <object>objects\objturretD</object>
+      <object>objects\objmturretD</object>
+      <object>objects\objbrknturretD</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
+    <room>rooms\level10</room>
+    <room>rooms\level11</room>
+    <room>rooms\level12</room>
     <room>rooms\levelboss</room>
     <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
