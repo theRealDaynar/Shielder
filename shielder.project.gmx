@@ -89,6 +89,8 @@
       <object>objects\objdiagturret3</object>
       <object>objects\objdiagturret4</object>
       <object>objects\objdiagturret5</object>
+      <object>objects\objdiagturret6</object>
+      <object>objects\objdiagturret7</object>
       <object>objects\objturretL</object>
       <object>objects\objmturretL</object>
       <object>objects\objturretR</object>
@@ -106,6 +108,7 @@
     <room>rooms\level10</room>
     <room>rooms\level11</room>
     <room>rooms\level12</room>
+    <room>rooms\level13</room>
     <room>rooms\levelboss</room>
     <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
