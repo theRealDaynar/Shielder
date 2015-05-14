@@ -38,6 +38,15 @@
     <sprite>sprites\sYWN</sprite>
     <sprite>sprites\sYWN2</sprite>
     <sprite>sprites\diag</sprite>
+    <sprite>sprites\diag2</sprite>
+    <sprite>sprites\diag3</sprite>
+    <sprite>sprites\diag4</sprite>
+    <sprite>sprites\diagA</sprite>
+    <sprite>sprites\diag2A</sprite>
+    <sprite>sprites\diag3A</sprite>
+    <sprite>sprites\diag4A</sprite>
+    <sprite>sprites\diag3B</sprite>
+    <sprite>sprites\diag4B</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -89,9 +98,12 @@
       <object>objects\objdiagturret2</object>
       <object>objects\objdiagturret3</object>
       <object>objects\objdiagturret4</object>
-      <object>objects\objdiagturret5</object>
-      <object>objects\objdiagturret6</object>
-      <object>objects\objdiagturret7</object>
+      <object>objects\objdiagturret1A</object>
+      <object>objects\objdiagturret2A</object>
+      <object>objects\objdiagturret3A</object>
+      <object>objects\objdiagturret4A</object>
+      <object>objects\objdiagturret3B</object>
+      <object>objects\objdiagturret4B</object>
       <object>objects\objturretL</object>
       <object>objects\objmturretL</object>
       <object>objects\objturretR</object>
@@ -105,14 +117,15 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\tut</room>
     <rooms name="world2">
       <room>rooms\level10</room>
       <room>rooms\level11</room>
       <room>rooms\level12</room>
       <room>rooms\level13</room>
+      <room>rooms\level14</room>
       <room>rooms\leveld</room>
     </rooms>
+    <room>rooms\tut</room>
     <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
