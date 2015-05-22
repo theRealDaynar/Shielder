@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rof = 20
+            <string>rof = 5
 alarm[0] = rof
 stage = 0
 image_speed = .1

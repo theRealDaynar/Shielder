@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>spawned = false
-maxhp = room_speed //* 30
+maxhp = room_speed * 15//* 30
 hp = maxhp
+hspeed = 2
 </string>
           </argument>
         </arguments>
@@ -68,7 +69,7 @@ hp = maxhp
             YWN.rof = 5
             YWN.turn_stop = -1
             YWN.turn_speed = 2
-            YWN.spd *= 2
+            YWN.spd *= 1.5
         }
         else if hp &lt;= 0
         {
@@ -100,6 +101,11 @@ hp = maxhp
 }
 else
     image_blend = c_white
+    
+if collision_line(bbox_left,y-1,bbox_right,y-1,objwall2,false,true)
+{
+    hspeed *= -1
+}
 </string>
           </argument>
         </arguments>
