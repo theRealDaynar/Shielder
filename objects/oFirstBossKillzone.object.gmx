@@ -88,6 +88,9 @@ hspeed = 2
             end_time = 90*1000000
         //instance_create(0,0,objshake)
         spawned = instance_create(512,384,YWN)
+        var wal = instance_create(192,0,objwall2);
+        wal.image_xscale = 3
+        wal.image_yscale = 2
     }
     with(instance_create(bbox_left + random(sprite_width),bbox_top,objdust))
     {
