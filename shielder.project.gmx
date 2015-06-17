@@ -47,6 +47,7 @@
     <sprite>sprites\diag4A</sprite>
     <sprite>sprites\diag3B</sprite>
     <sprite>sprites\diag4B</sprite>
+    <sprite>sprites\dance</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -115,9 +116,11 @@
       <object>objects\objmturretD</object>
       <object>objects\objbrknturretD</object>
     </objects>
+    <object>objects\objdance</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
+    <room>rooms\credits</room>
     <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
