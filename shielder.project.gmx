@@ -120,7 +120,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\tut</room>
-    <room>rooms\foreshadowing</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
     <room>rooms\level3</room>
@@ -143,6 +142,7 @@
       <room>rooms\escapelevel1</room>
       <room>rooms\levelnext</room>
       <room>rooms\levelboss</room>
+      <room>rooms\mainmenu</room>
       <room>rooms\credits</room>
     </rooms>
     <rooms name="world2">
@@ -152,6 +152,7 @@
       <room>rooms\level13</room>
       <room>rooms\level14</room>
       <room>rooms\leveld</room>
+      <room>rooms\foreshadowing</room>
     </rooms>
   </rooms>
   <help>
