@@ -48,6 +48,7 @@
     <sprite>sprites\diag3B</sprite>
     <sprite>sprites\diag4B</sprite>
     <sprite>sprites\dance</sprite>
+    <sprite>sprites\s1x1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -59,6 +60,7 @@
     <path>paths\boss6</path>
     <path>paths\pTest</path>
   </paths>
+  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\objplayer</object>
     <object>objects\objplayergun</object>
@@ -117,8 +119,15 @@
       <object>objects\objbrknturretD</object>
     </objects>
     <object>objects\objdance</object>
+    <object>objects\oBulletParticle</object>
+    <object>objects\oLevelSelect</object>
+    <object>objects\oButton</object>
+    <object>objects\oPlay</object>
+    <object>objects\oExit</object>
+    <object>objects\oContinue</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\mainmenu</room>
     <room>rooms\tut</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
@@ -142,7 +151,6 @@
       <room>rooms\escapelevel1</room>
       <room>rooms\levelnext</room>
       <room>rooms\levelboss</room>
-      <room>rooms\mainmenu</room>
       <room>rooms\credits</room>
     </rooms>
     <rooms name="world2">
@@ -154,6 +162,7 @@
       <room>rooms\leveld</room>
       <room>rooms\foreshadowing</room>
     </rooms>
+    <room>rooms\level_select</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
