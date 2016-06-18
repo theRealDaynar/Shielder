@@ -60,11 +60,11 @@
     <path>paths\boss6</path>
     <path>paths\pTest</path>
   </paths>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\objplayer</object>
     <object>objects\objplayergun</object>
     <object>objects\soontobe</object>
+    <object>objects\objshield</object>
     <object>objects\objwall</object>
     <object>objects\objwall2</object>
     <object>objects\objwall3</object>
@@ -94,7 +94,6 @@
     <object>objects\oMovingWall</object>
     <object>objects\YWN</object>
     <object>objects\oFirstBossKillzone</object>
-    <object>objects\objshield</object>
     <object>objects\objdeathwall</object>
     <objects name="turrets">
       <object>objects\objdiagturret1</object>

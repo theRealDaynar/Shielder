@@ -178,6 +178,9 @@ if (!place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('S'))) and (facing =
 if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (facing = 0) {instance_create(x-8,y+32,objdustl)}
 if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('A'))) and (facing = 1) {instance_create(x+8,y+32,objdustr)}
 if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (keyboard_check(ord('A'))) {facing = 2}
+
+if (keyboard_check(ord('S'))) and (facing = 0) and (place_meeting(x,y+1,objwall2)) {image_index = 11}
+if (keyboard_check(ord('S'))) and (facing = 1) and (place_meeting(x,y+1,objwall2)) {image_index = 12}
 </string>
           </argument>
         </arguments>

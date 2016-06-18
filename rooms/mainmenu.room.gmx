@@ -13,7 +13,6 @@
   <code>globalvar TIMER_FONT;
 TIMER_FONT = font_add_sprite_ext(sFont, "1234567890.", false,2)
 audio_stop_all()
-audio_play_sound(Apex_Beat, 1, true)
 instance_create(room_width/2,room_height/2,oPlay)
 instance_create(room_width/2,room_height/2 + room_height/6,oContinue)
 instance_create(room_width/2,room_height/2 + room_height/3,oExit)</code>
