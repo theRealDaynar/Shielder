@@ -238,7 +238,7 @@ if (keyboard_check(ord('S'))) and (facing = 1) and (place_meeting(x,y+1,objwall2
             <string>///Daynar's added code
 var shield_width = 3;
 var block_threshhold = other.speed/4
-if (image_index = 0) or (image_index = 4) //right
+if (image_index = 0) or (image_index = 4) or image_index = 11 //right
     if other.hspeed &lt; -block_threshhold//other.object_index = objbulletL
         with(other)
             event_user(0)
@@ -247,7 +247,7 @@ if (image_index = 0) or (image_index = 4) //right
             event_user(0)
     else
         room_restart()
-else if (image_index = 1) or (image_index = 5) //left
+else if (image_index = 1) or (image_index = 5) or image_index = 12 //left
     if other.hspeed &gt; block_threshhold//other.object_index = objbulletR
         with(other)
             event_user(0)
