@@ -5,9 +5,10 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\Vanishing_Point</sound>
-    <sound>sound\Apex_Beat</sound>
-    <sound>sound\Impossible</sound>
+    <sound>sound\menumusic</sound>
+    <sound>sound\music1</sound>
+    <sound>sound\music2</sound>
+    <sound>sound\music3</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
@@ -30,6 +31,7 @@
     <sprite>sprites\blackscreen</sprite>
     <sprite>sprites\stripe</sprite>
     <sprite>sprites\fadein</sprite>
+    <sprite>sprites\fadein2</sprite>
     <sprite>sprites\sMorter</sprite>
     <sprite>sprites\MortarFade</sprite>
     <sprite>sprites\explosion</sprite>
@@ -49,8 +51,16 @@
     <sprite>sprites\diag4B</sprite>
     <sprite>sprites\dance</sprite>
     <sprite>sprites\s1x1</sprite>
+    <sprite>sprites\whitefade</sprite>
+    <sprite>sprites\logo</sprite>
+    <sprite>sprites\playbutton</sprite>
+    <sprite>sprites\contbutton</sprite>
+    <sprite>sprites\exitbutton</sprite>
+    <sprite>sprites\bgbox</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg1</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\boss1</path>
     <path>paths\boss2</path>
@@ -85,6 +95,7 @@
     <object>objects\objRUN</object>
     <object>objects\objstripe</object>
     <object>objects\objfadein</object>
+    <object>objects\objfadein2</object>
     <object>objects\oMorter</object>
     <object>objects\oItem</object>
     <object>objects\objmortarfade</object>
@@ -124,6 +135,11 @@
     <object>objects\oPlay</object>
     <object>objects\oExit</object>
     <object>objects\oContinue</object>
+    <object>objects\whitefade1</object>
+    <object>objects\whitefade2</object>
+    <object>objects\objlogo</object>
+    <object>objects\objbgbox</object>
+    <object>objects\objbgbox2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mainmenu</room>

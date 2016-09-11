@@ -57,6 +57,7 @@
     <instance objName="objwall2" x="640" y="512" name="inst_102CC144" locked="0" code="" scaleX="6" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="0" y="0" name="inst_624E7BBD" locked="0" code="" scaleX="6" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="640" y="0" name="inst_72EA548B" locked="0" code="" scaleX="6" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="whitefade2" x="0" y="0" name="inst_B56D8619" locked="0" code="depth = -1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

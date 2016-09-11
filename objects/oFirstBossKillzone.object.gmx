@@ -29,6 +29,7 @@
 maxhp = room_speed * 15//* 30
 hp = maxhp
 hspeed = 2
+music = 0
 </string>
           </argument>
         </arguments>
@@ -53,6 +54,7 @@ hspeed = 2
             <kind>1</kind>
             <string>if collision_line(bbox_left,y-1,bbox_right,y-1,objplayer,false,true)
 {
+if music != 1 {audio_stop_all(); audio_play_sound(music3, 1, true); choose(audio_sound_set_track_position(music3, 38.5), audio_sound_set_track_position(music3, 0)); music = 1;}
     image_blend = c_red
     if instance_exists(YWN)
     {
@@ -80,6 +82,9 @@ hspeed = 2
             with(oTimer)
                 instance_destroy()
             spawned = id
+            instance_create(0, 0, whitefade1)
+            room_speed = 10
+            
         }
     }
     else if spawned = false

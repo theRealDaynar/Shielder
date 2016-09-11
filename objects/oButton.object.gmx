@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="6" enumb="11">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,13 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_blend = c_white
+            <string>image_index = 0
+image_speed = 0
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="10">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -48,13 +49,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_blend = c_black
+            <string>if !instance_exists(objbulletL) if image_speed = 0 {if distance_to_point(mouse_x,mouse_y) = 0  {image_index=1} else {image_index=0}}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="6" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -71,9 +72,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_center)
-draw_set_valign(fa_center)
-draw_text_color(x,y,text,image_blend,image_blend,image_blend,image_blend,1)
+            <string>if !instance_exists(objbulletL) image_speed = 0.1
 </string>
           </argument>
         </arguments>
