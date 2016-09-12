@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>first_level = level1
-global.farthest_level = escapelevel2
 total_levels = global.farthest_level - first_level + 1
 if global.farthest_level &gt;= tut2
     --total_levels

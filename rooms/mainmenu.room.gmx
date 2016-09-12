@@ -15,8 +15,6 @@ globalvar TIMER_FONT;
 TIMER_FONT = font_add_sprite_ext(sFont, "1234567890.", false,2)
 audio_stop_all()
 draw_set_colour($4B4B4B)
-audio_stop_all()
-global.music = audio_play_sound(menumusic, 1, true)
 if file_exists("save_data.sav")
 {
     var save_buffer = buffer_load("save_data.sav")
