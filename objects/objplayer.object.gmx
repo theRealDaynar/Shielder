@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>player</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -43,35 +43,9 @@ morter_speed = 6 //min speed
 charge_modifier = 6 //max speed = charge_modifier * morter_speed
 max_charge_time = room_speed * 1.5 
 cur_charge_time = 0
+
+shield_width = 13
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>objshield</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -94,6 +68,102 @@ cur_charge_time = 0
           <argument>
             <kind>1</kind>
             <string>do nothing bra</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var bbl = x - sprite_xoffset
+var bbt = y - sprite_yoffset
+var bbr = bbl + sprite_width
+var bbb = bbt + sprite_height
+var shielddir = other.facing;
+if keyboard_check(ord('W'))
+    shielddir = 2
+if (image_index = 8 or image_index = 9) and sprite_index = player
+    shielddir = 3
+var phspd = other.x - other.xprevious
+var pvspd = other.y - other.yprevious
+switch(shielddir)
+{
+    case 0:
+    var sbbl = bbox_right - phspd
+    var sbbt = bbt
+    var sbbr = bbr
+    var sbbb = bbb
+    break;
+    case 1:
+    var sbbl = bbl
+    var sbbt = bbt
+    var sbbr = bbox_left - phspd
+    var sbbb = bbb
+    break;
+    case 2:
+    var sbbl = bbl
+    var sbbt = bbt
+    var sbbr = bbr
+    var sbbb = bbox_top - pvspd
+    break;
+    case 3:
+    var sbbl = bbl
+    var sbbt = bbox_bottom - pvspd
+    var sbbr = bbr
+    var sbbb = bbb
+    break;
+}
+with(objbulletParent)
+{
+    if point_in_rectangle(x,y,bbl,bbt,bbr,bbb)
+    {
+        var destroyed = false
+
+        if point_in_rectangle(x,y,sbbl,sbbt,sbbr,sbbb)
+            {
+                destroyed = true
+                event_user(0)
+            }
+            else
+            {
+        x = xprevious
+        y = yprevious
+        var tspd = speed
+        
+        while(tspd &gt; 0)
+        {
+            var s = min(1,tspd--);
+            x+= dcos(direction) * s
+            y-= dsin(direction) * s
+            if point_in_rectangle(x,y,sbbl,sbbt,sbbr,sbbb)
+            {
+                destroyed = true
+                event_user(0)
+                break;
+            }
+        }
+        }
+        if !destroyed and point_in_rectangle(x,y,other.bbox_left,other.bbox_top,other.bbox_right,other.bbox_bottom)
+        {
+            room_restart()
+        }
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -153,10 +223,33 @@ if (place_meeting(x,y+vsp,objwall2))
 y += vsp;
 
 //Animations
-if (keyboard_check(ord('D'))) and (facing != 2) {facing = 0}
-if (keyboard_check(ord('A'))) and (facing != 2) {facing = 1}
+image_speed = 0
+if (keyboard_check(ord('D'))) and (facing != 2) {facing = 0
+if sprite_index != sPlayerRight and sprite_index != sPlayerRightUp
+    image_index = 0
+if keyboard_check(ord('W'))
+sprite_index = sPlayerRightUp
+else
+sprite_index = sPlayerRight
+image_speed = .334
+}
+else if (keyboard_check(ord('A'))) and (facing != 2) {facing = 1
+if sprite_index != sPlayerLeft and sprite_index != sPlayerLeftUp
+    image_index = 0
+if keyboard_check(ord('W'))
+sprite_index = sPlayerLeftUp
+else
+sprite_index = sPlayerLeft
+image_speed = .334
+}
+else
+sprite_index = player
 if (keyboard_check_released(ord('D'))) {facing = 0; counter = 0}
 if (keyboard_check_released(ord('A'))) {facing = 1; counter = 0}
+if keyboard_check(ord("A")) and keyboard_check(ord("D"))
+{counter += 1}
+
+if sprite_index = player{
 if (facing = 0) {image_index = 0}
 if (facing = 1) and (!keyboard_check(ord('D'))) {image_index = 1}
 
@@ -164,8 +257,7 @@ if keyboard_check(ord("A")) and !keyboard_check(ord("D"))
 {image_index = 5}
 else if !keyboard_check(ord("A")) and keyboard_check(ord("D"))
 {image_index = 4}
-else if keyboard_check(ord("A")) and keyboard_check(ord("D"))
-{counter += 1}
+
 if (counter &gt; room_speed * 1)
 {image_index = 10}
 
@@ -175,12 +267,14 @@ if (keyboard_check(ord('D'))) and (keyboard_check(ord('W'))) and (facing != 2) {
 if (keyboard_check(ord('A'))) and (keyboard_check(ord('W'))) and (facing != 2) {image_index = 7}
 if (!place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('S'))) and (facing = 0) {image_index = 8}
 if (!place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('S'))) and (facing = 1) {image_index = 9}
-if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (facing = 0) {instance_create(x-8,y+32,objdustl)}
-if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('A'))) and (facing = 1) {instance_create(x+8,y+32,objdustr)}
-if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (keyboard_check(ord('A'))) {facing = 2}
 
 if (keyboard_check(ord('S'))) and (facing = 0) and (place_meeting(x,y+1,objwall2)) {image_index = 11}
 if (keyboard_check(ord('S'))) and (facing = 1) and (place_meeting(x,y+1,objwall2)) {image_index = 12}
+}
+
+if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (facing = 0) {instance_create(x-8,y+32,objdustl)}
+if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('A'))) and (facing = 1) {instance_create(x+8,y+32,objdustr)}
+if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (keyboard_check(ord('A'))) {facing = 2}
 </string>
           </argument>
         </arguments>
@@ -235,7 +329,7 @@ if (keyboard_check(ord('S'))) and (facing = 1) and (place_meeting(x,y+1,objwall2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Daynar's added code
+            <string>/*//Daynar's added code
 var shield_width = 3;
 var block_threshhold = other.speed/4
 if (image_index = 0) or (image_index = 4) or image_index = 11 //right

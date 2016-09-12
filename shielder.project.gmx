@@ -12,6 +12,10 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
+    <sprite>sprites\sPlayerRight</sprite>
+    <sprite>sprites\sPlayerLeft</sprite>
+    <sprite>sprites\sPlayerRightUp</sprite>
+    <sprite>sprites\sPlayerLeftUp</sprite>
     <sprite>sprites\player</sprite>
     <sprite>sprites\shield</sprite>
     <sprite>sprites\sFirstBossKillZone</sprite>
@@ -70,6 +74,9 @@
     <path>paths\boss6</path>
     <path>paths\pTest</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\save.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\objplayer</object>
     <object>objects\objplayergun</object>
@@ -140,6 +147,7 @@
     <object>objects\objlogo</object>
     <object>objects\objbgbox</object>
     <object>objects\objbgbox2</object>
+    <object>objects\oController</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mainmenu</room>

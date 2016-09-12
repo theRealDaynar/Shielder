@@ -16,7 +16,23 @@ TIMER_FONT = font_add_sprite_ext(sFont, "1234567890.", false,2)
 audio_stop_all()
 draw_set_colour($4B4B4B)
 audio_stop_all()
-audio_play_sound(menumusic, 1, true)
+global.music = audio_play_sound(menumusic, 1, true)
+if file_exists("save_data.sav")
+{
+    var save_buffer = buffer_load("save_data.sav")
+    global.farthest_level = buffer_read(save_buffer,buffer_u8)
+    global.music_volume = buffer_read(save_buffer,buffer_u8) / 255
+    global.effects_volume = buffer_read(save_buffer,buffer_u8) / 255
+    buffer_delete(save_buffer)
+}
+else
+{
+    global.farthest_level = 0
+    global.music_volume = .5
+    global.effects_volume = .5
+}
+if !instance_exists(oController)
+instance_create(0,0,oController)
 //instance_create(room_width/2,room_height/2,oPlay)
 //instance_create(room_width/2,room_height/2 + room_height/6,oContinue)
 //instance_create(room_width/2,room_height/2 + room_height/3,oExit)</code>

@@ -26,11 +26,25 @@
           <argument>
             <kind>1</kind>
             <string>first_level = level1
-total_levels = levelboss - first_level
-collums = 4
-rows = ceil(total_levels/collums)
+global.farthest_level = escapelevel2
+total_levels = global.farthest_level - first_level + 1
+if global.farthest_level &gt;= tut2
+    --total_levels
+if total_levels &lt;= 0
+{
+    room_goto(mainmenu)
+    exit
+}
+collums = ceil(sqrt(total_levels))
+rows = collums
+if total_levels &lt;= (collums * (rows - 1))
+    --rows
 cell_width = room_width/collums
 cell_height = room_height/rows
+draw_set_halign(fa_center)
+draw_set_valign(fa_center)
+draw_set_font(TIMER_FONT)
+
 </string>
           </argument>
         </arguments>
@@ -57,7 +71,7 @@ cell_height = room_height/rows
 {
     for(var xx = 0; xx &lt; collums; xx++)
     {
-        if xx + yy * collums &gt; total_levels
+        if xx + yy * collums &gt; total_levels - 1
             break
         else
         {
@@ -66,10 +80,16 @@ cell_height = room_height/rows
             {
                 text_col = c_white
                 if mouse_check_button_pressed(mb_left)
-                    room_goto(first_level + xx + yy * collums)
+                {
+                    var rm = first_level + xx + yy * collums
+                    if rm &gt;= tut2
+                        ++rm
+                    room_goto(rm)
+                }
                 draw_rectangle(xx * cell_width,yy * cell_height,(xx + 1) * cell_width,(yy + 1) * cell_height,0)
             }
-            draw_text_color(xx * cell_width + cell_width/2,yy * cell_height + cell_height/2,"Level " + string(xx + yy * collums),text_col,text_col,text_col,text_col,1)
+            //display whatever is in cell here
+            draw_text_transformed_colour(xx * cell_width + cell_width/2,yy * cell_height + cell_height/2,string(xx + yy * collums),4,4,0,text_col,text_col,text_col,text_col,1)
         }
     }
 }

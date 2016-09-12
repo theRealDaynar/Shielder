@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = objplayer.x
+            <string>instance_destroy()
+x = objplayer.x
 y = objplayer.y
 image_index = objplayer.image_index
 </string>
