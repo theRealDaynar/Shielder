@@ -116,10 +116,10 @@ else if room &lt; levelnext
 }
 else
 {
-    if !audio_is_playing(music3)
+    if !audio_is_playing(bossloop)
     {
         audio_stop_all()
-        audio_play_sound(music3, 1, true)
+        audio_play_sound(bossloop, 1, true)
     }   
 }
 ///save furthest room

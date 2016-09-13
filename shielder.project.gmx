@@ -9,6 +9,7 @@
     <sound>sound\music1</sound>
     <sound>sound\music2</sound>
     <sound>sound\music3</sound>
+    <sound>sound\bossloop</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>

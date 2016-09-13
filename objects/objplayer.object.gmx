@@ -270,7 +270,8 @@ else if !keyboard_check(ord("A")) and keyboard_check(ord("D"))
 
 if (counter &gt; room_speed * 1)
 {image_index = 10}
-
+if keyboard_check(ord('A')) facing = 1
+if keyboard_check(ord("D")) facing = 0
 if (keyboard_check(ord('W'))) and (facing = 0) and (facing != 2) {image_index = 2}
 if (keyboard_check(ord('W'))) and (facing = 1) and (facing != 2) {image_index = 3}
 if (keyboard_check(ord('D'))) and (keyboard_check(ord('W'))) and (facing != 2) {image_index = 6}
