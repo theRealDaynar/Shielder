@@ -106,6 +106,7 @@
     <instance objName="objwall2" x="448" y="640" name="inst_AA09BECA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="0" y="0" name="inst_BCFD994D" locked="0" code="" scaleX="2" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="128" y="704" name="inst_B50DBA0A" locked="0" code="" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objwin" x="-64" y="0" name="inst_5BCA1466" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
