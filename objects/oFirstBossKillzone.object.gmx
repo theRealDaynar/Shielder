@@ -54,7 +54,7 @@ music = 0
             <kind>1</kind>
             <string>if collision_line(bbox_left,y-1,bbox_right,y-1,objplayer,false,true)
 {
-if music != 1 {audio_stop_all(); audio_play_sound(music3, 1, true); choose(audio_sound_set_track_position(music3, 38.5), audio_sound_set_track_position(music3, 0)); music = 1;}
+//if music != 1 {audio_stop_all(); audio_play_sound(music3, 1, true); choose(audio_sound_set_track_position(music3, 38.5), audio_sound_set_track_position(music3, 0)); music = 1;}
     image_blend = c_red
     if instance_exists(YWN)
     {

@@ -155,7 +155,30 @@ if global.farthest_level &lt; room and room &lt; levelboss
 {
     draw_surface_ext(pause_snapshot,0,0,1,1,0,c_white,.7)
 }
-draw_text(room_width * .5,100,"PAUSED")
+draw_set_halign(fa_center)
+draw_set_color(c_white)
+draw_text_transformed(room_width * .5,100,"PAUSED",4,4,0)
+draw_text_transformed(room_width * .5,300,"Main Menu",4,4,0)
+draw_text_transformed(room_width * .5,600,"Volume",4,4,0)
+draw_rectangle(room_width * .2, 600, room_width * .8, 605,false)
+var volume_x = room_width * .6 * global.music_volume 
+draw_rectangle(room_width * .2 + volume_x - 5, 590, room_width * .2 + volume_x + 5, 615, false)
+draw_set_color(c_black)
+if mouse_check_button(mb_left)
+{
+if mouse_y &gt; 150 and mouse_y &lt; 450
+{
+    room_goto(mainmenu)
+    visible = false
+    surface_free(pause_snapshot)
+}
+else if point_in_rectangle(mouse_x,mouse_y,room_width * .2,590,room_width * .8, 615)
+{
+    global.music_volume = clamp((mouse_x - room_width * .2)/(room_width * .6),0,1)
+    audio_master_gain(global.music_volume)
+    save()
+}
+}
 
 </string>
           </argument>

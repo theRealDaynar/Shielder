@@ -88,7 +88,7 @@ draw_set_font(TIMER_FONT)
                 draw_rectangle(xx * cell_width,yy * cell_height,(xx + 1) * cell_width,(yy + 1) * cell_height,0)
             }
             //display whatever is in cell here
-            draw_text_transformed_colour(xx * cell_width + cell_width/2,yy * cell_height + cell_height/2,string(xx + yy * collums),4,4,0,text_col,text_col,text_col,text_col,1)
+            draw_text_transformed_colour(xx * cell_width + cell_width/2,yy * cell_height + cell_height/2,string(xx + yy * collums + 1),4,4,0,text_col,text_col,text_col,text_col,1)
         }
     }
 }
