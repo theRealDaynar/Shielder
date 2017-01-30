@@ -90,7 +90,7 @@ music = noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = mainmenu or room = level_select
+            <string>if room = mainmenu or room = level_select or room = credits
 {
     if !audio_is_playing(menumusic)
     {

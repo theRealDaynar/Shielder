@@ -26,12 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>depth = 5000
+image_speed = 0
 image_angle = irandom_range(0,360)
 size = random_range(2,4)
 image_xscale = size
 image_yscale = size
 rotation = random_range(1, 2)
 x = irandom_range(64, 964)
+ee = irandom_range(0, 500)
+if ee = 50 {image_index = 1}
 </string>
           </argument>
         </arguments>

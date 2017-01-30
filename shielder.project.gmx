@@ -62,6 +62,7 @@
     <sprite>sprites\contbutton</sprite>
     <sprite>sprites\exitbutton</sprite>
     <sprite>sprites\bgbox</sprite>
+    <sprite>sprites\sprcredits</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg1</background>
@@ -149,6 +150,7 @@
     <object>objects\objbgbox</object>
     <object>objects\objbgbox2</object>
     <object>objects\oController</object>
+    <object>objects\objcredits</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mainmenu</room>

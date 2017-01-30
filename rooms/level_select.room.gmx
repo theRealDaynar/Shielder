@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="oLevelSelect" x="288" y="288" name="inst_67F38928" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objfadein" x="-1024" y="0" name="inst_27AE4B35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
