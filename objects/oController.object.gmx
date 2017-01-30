@@ -50,7 +50,9 @@ music = noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or keyboard_check_pressed(ord('P'))
+            <string>if room = level_select &amp;&amp; keyboard_check_pressed(vk_escape)
+    room_goto(mainmenu)
+else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or keyboard_check_pressed(ord('P'))
 {
     if visible
     {
@@ -162,6 +164,9 @@ draw_text_transformed(room_width * .5,300,"Main Menu",4,4,0)
 draw_text_transformed(room_width * .5,600,"Volume",4,4,0)
 draw_rectangle(room_width * .2, 600, room_width * .8, 605,false)
 var volume_x = room_width * .6 * global.music_volume 
+draw_rectangle(room_width * .2 + volume_x - 5, 590, room_width * .2 + volume_x + 5, 615, false)
+draw_rectangle(room_width * .2, 600, room_width * .8, 605,false)
+var volume_x = room_width * .6 * global.effects_volume 
 draw_rectangle(room_width * .2 + volume_x - 5, 590, room_width * .2 + volume_x + 5, 615, false)
 draw_set_color(c_black)
 if mouse_check_button(mb_left)
