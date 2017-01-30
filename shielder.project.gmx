@@ -13,6 +13,7 @@
     <sound>sound\ricochet1</sound>
     <sound>sound\jump</sound>
     <sound>sound\landing</sound>
+    <sound>sound\jingle</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
@@ -70,6 +71,8 @@
     <sprite>sprites\menusound</sprite>
     <sprite>sprites\musicmenu</sprite>
     <sprite>sprites\paused</sprite>
+    <sprite>sprites\gameomancylogo</sprite>
+    <sprite>sprites\gameomancy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg1</background>
@@ -112,6 +115,7 @@
     <object>objects\objstripe</object>
     <object>objects\objfadein</object>
     <object>objects\objfadein2</object>
+    <object>objects\objblackfade</object>
     <object>objects\oMorter</object>
     <object>objects\oItem</object>
     <object>objects\objmortarfade</object>
@@ -158,8 +162,11 @@
     <object>objects\objbgbox2</object>
     <object>objects\oController</object>
     <object>objects\objcredits</object>
+    <object>objects\objgameomancylogo</object>
+    <object>objects\objgameomancy</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\intro</room>
     <room>rooms\mainmenu</room>
     <room>rooms\tut</room>
     <room>rooms\level1</room>

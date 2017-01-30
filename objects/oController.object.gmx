@@ -93,7 +93,11 @@ else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = mainmenu or room = level_select or room = credits
+            <string>if room = intro
+{
+    audio_stop_all()
+}
+else if room = mainmenu or room = level_select or room = credits
 {
     if !audio_is_playing(menumusic)
     {

@@ -10,31 +10,7 @@
   <persistent>0</persistent>
   <colour>3947580</colour>
   <showcolour>-1</showcolour>
-  <code>randomize()
-globalvar TIMER_FONT;
-TIMER_FONT = font_add_sprite_ext(sFont, "1234567890.", false,2)
-draw_set_colour($4B4B4B)
-if file_exists("save_data.sav")
-{
-    var save_buffer = buffer_load("save_data.sav")
-    global.farthest_level = buffer_read(save_buffer,buffer_u8)
-    global.music_volume = buffer_read(save_buffer,buffer_u8) / 255
-    global.effects_volume = buffer_read(save_buffer,buffer_u8) / 255
-    buffer_delete(save_buffer)
-    audio_master_gain(global.music_volume)
-}
-else
-{
-    global.farthest_level = 0
-    global.music_volume = .5
-    global.effects_volume = .5
-    audio_master_gain(global.music_volume)
-}
-if !instance_exists(oController)
-instance_create(0,0,oController)
-//instance_create(room_width/2,room_height/2,oPlay)
-//instance_create(room_width/2,room_height/2 + room_height/6,oContinue)
-//instance_create(room_width/2,room_height/2 + room_height/3,oExit)</code>
+  <code></code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
