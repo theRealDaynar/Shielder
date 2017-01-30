@@ -50,7 +50,8 @@ music = noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = level_select &amp;&amp; keyboard_check_pressed(vk_escape)
+            <string>if room = mainmenu exit
+if room = level_select &amp;&amp; keyboard_check_pressed(vk_escape)
     room_goto(mainmenu)
 else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or keyboard_check_pressed(ord('P'))
 {
@@ -157,6 +158,39 @@ if global.farthest_level &lt; room and room &lt; levelboss
 {
     draw_surface_ext(pause_snapshot,0,0,1,1,0,c_white,.7)
 }
+var xx = room_width * .5
+var yy = 40
+var scale = sin((current_time % 2000) / 1000 * pi) * .05 + 1;
+draw_sprite_ext(paused,0,xx,yy,scale,scale,0,c_white,1)
+yy += sprite_get_height(paused) + 40
+if point_in_rectangle(mouse_x,mouse_y,xx - sprite_get_width(menubutton) * .5,yy,xx + sprite_get_width(menubutton) * .5,yy + sprite_get_height(menubutton))
+{
+    if mouse_check_button_pressed(mb_left)
+    {
+        visible = false
+        surface_free(pause_snapshot)
+        room_goto(mainmenu)
+    }
+    draw_sprite(menubutton,1,xx,yy)
+}
+else
+    draw_sprite(menubutton,0,xx,yy)
+yy += sprite_get_height(menubutton) + 40
+draw_sprite(menusound,0,xx,yy)
+yy += sprite_get_height(menusound) + 40
+draw_set_color(c_black)
+draw_rectangle(room_width * .2, yy, room_width * .8, yy + 5,false)
+var volume_x = room_width * .6 * global.effects_volume 
+draw_rectangle(room_width * .2 + volume_x - 5, yy - 10, room_width * .2 + volume_x + 5, yy + 15, false)
+yy += 40
+draw_sprite(musicmenu,0,xx,yy)
+yy += sprite_get_height(musicmenu) + 40
+draw_rectangle(room_width * .2, yy, room_width * .8, yy + 5,false)
+var volume_x = room_width * .6 * global.music_volume 
+draw_rectangle(room_width * .2 + volume_x - 5, yy - 10, room_width * .2 + volume_x + 5, yy + 15, false)
+
+
+/*
 draw_set_halign(fa_center)
 draw_set_color(c_white)
 draw_text_transformed(room_width * .5,100,"PAUSED",4,4,0)
