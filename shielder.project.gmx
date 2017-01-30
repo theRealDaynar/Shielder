@@ -10,6 +10,9 @@
     <sound>sound\music2</sound>
     <sound>sound\music3</sound>
     <sound>sound\bossloop</sound>
+    <sound>sound\ricochet1</sound>
+    <sound>sound\jump</sound>
+    <sound>sound\landing</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
@@ -63,6 +66,10 @@
     <sprite>sprites\exitbutton</sprite>
     <sprite>sprites\bgbox</sprite>
     <sprite>sprites\sprcredits</sprite>
+    <sprite>sprites\menubutton</sprite>
+    <sprite>sprites\menusound</sprite>
+    <sprite>sprites\musicmenu</sprite>
+    <sprite>sprites\paused</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg1</background>
