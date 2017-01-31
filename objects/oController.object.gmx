@@ -160,7 +160,7 @@ if global.farthest_level &lt; room and room &lt; levelboss
             <kind>1</kind>
             <string>if surface_exists(pause_snapshot)
 {
-    draw_surface_ext(pause_snapshot,0,0,1,1,0,c_white,.7)
+    draw_surface_ext(pause_snapshot,0,0,1,1,0,c_white,.5)
 }
 var xx = room_width * .5
 var yy = 40
@@ -183,12 +183,24 @@ yy += sprite_get_height(menubutton) + 40
 draw_sprite(menusound,0,xx,yy)
 yy += sprite_get_height(menusound) + 40
 draw_set_color(c_black)
+if mouse_check_button(mb_left) and point_in_rectangle(mouse_x,mouse_y,room_width * .2 - 15,yy - 20,room_width * .8 + 15, yy + 25)
+{
+    global.effects_volume = clamp((mouse_x - room_width * .2)/(room_width * .6),0,1)
+    audio_master_gain(global.effects_volume)
+    save()
+}
 draw_rectangle(room_width * .2, yy, room_width * .8, yy + 5,false)
 var volume_x = room_width * .6 * global.effects_volume 
 draw_rectangle(room_width * .2 + volume_x - 5, yy - 10, room_width * .2 + volume_x + 5, yy + 15, false)
 yy += 40
 draw_sprite(musicmenu,0,xx,yy)
 yy += sprite_get_height(musicmenu) + 40
+if mouse_check_button(mb_left) and point_in_rectangle(mouse_x,mouse_y,room_width * .2 - 15,yy - 20,room_width * .8 + 15, yy + 25)
+{
+    global.music_volume = clamp((mouse_x - room_width * .2)/(room_width * .6),0,1)
+    audio_master_gain(global.music_volume)
+    save()
+}
 draw_rectangle(room_width * .2, yy, room_width * .8, yy + 5,false)
 var volume_x = room_width * .6 * global.music_volume 
 draw_rectangle(room_width * .2 + volume_x - 5, yy - 10, room_width * .2 + volume_x + 5, yy + 15, false)

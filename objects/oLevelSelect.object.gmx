@@ -92,7 +92,7 @@ draw_set_font(TIMER_FONT)
             }
             //display whatever is in cell here
             if xx + yy * collums = total_levels
-                draw_sprite(dance,(current_time % 400)/100,xx * cell_width + cell_width/2 - 32,yy * cell_height + cell_height/2 - 32)
+                draw_sprite(dance,(current_time % 800)/200,xx * cell_width + cell_width/2 - 32,yy * cell_height + cell_height/2 - 32)
             else
                 draw_text_transformed_colour(xx * cell_width + cell_width/2,yy * cell_height + cell_height/2,string(xx + yy * collums + 1),4,4,0,text_col,text_col,text_col,text_col,1)
         }
