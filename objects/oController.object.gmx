@@ -51,7 +51,7 @@ im = ds_list_create()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = mainmenu exit
+            <string>if room = mainmenu or room = intro exit
 if room = level_select &amp;&amp; keyboard_check_pressed(vk_escape)
     room_goto(mainmenu)
 else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or keyboard_check_pressed(ord('P'))

@@ -177,9 +177,9 @@ image_speed = 0
 {
 speed = 0;
 stopped = true;
-alarm[0] = 80;
-alarm[1] = 250;
-alarm[2] = 350;
+alarm[0] = 1;
+alarm[1] = 170;
+alarm[2] = 280;
 }
 </string>
           </argument>
