@@ -76,7 +76,7 @@
 {
 speed = 0;
 stopped = true;
-audio_play_sound(jingle,0,0);
+audio_play_sound_on(global.effects,jingle,false,0)
 }
 </string>
           </argument>

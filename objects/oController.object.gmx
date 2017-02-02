@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>pause_snapshot = noone
 music = noone
+im = ds_list_create()
 
 </string>
           </argument>
@@ -69,8 +70,121 @@ else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or
         visible = true
     }
 }
+randomize()
+if random(100) &lt; .0001
+rd = http_post_string("http://feed.photobucket.com/images/cute%20anime/feed.rss", "");
 
-
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="62">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ds_map_find_value(async_load, "id") == rd
+    {
+    
+    if ds_map_find_value(async_load, "status") == 0
+       {
+       pll = ds_list_create()
+       var str = ds_map_find_value(async_load, "result");
+       var p = string_pos("media:content",str)
+       do
+       {
+       str = string_delete(str,1,p)
+       str = string_delete(str,1,string_pos("url=",str)+4)
+       str = string_delete(str,1,string_pos("url=",str)+4)
+       var strc = string_copy(str,1,string_pos('"',str)-1)
+       if string_pos("gif",strc) = 0 and string_length(strc) &gt; 10{
+       ds_list_add(pll,strc)
+       show_debug_message(pll[|ds_list_size(pll)-1])}
+       p = string_pos("media:content",str)
+       }
+       until(p==0);
+       if ds_list_size(im) = 0
+       ds_list_add(im,sprite_add(string(pll[|irandom_range(0,ds_list_size(pll)-1)]),0,false,false,0,0))
+   
+       }
+      }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="60">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var s = ds_list_size(im)
+//show_debug_message("image event")
+if ds_map_find_value(async_load, "id") == im[|s - 1]
+   {
+   if ds_map_find_value(async_load, "status") &lt; 0
+      {
+        ds_list_delete(im,s - 1)
+        ds_list_add(im,sprite_add(pll[|irandom_range(0,ds_list_size(pll)-1)],0,false,false,0,0))
+        show_debug_message("failed to load")
+      }
+      else
+      {
+      if s &lt;= gameomancy
+      {
+        show_debug_message("loaded " + string(s))
+            var w = sprite_get_width(s - 1)
+            var h = sprite_get_height(s - 1)
+            var surf = surface_create(w,h)
+            surface_set_target(surf)
+            draw_sprite_stretched(im[|s-1],0,0,0,w,h)
+            draw_text(0,0," ") //it will be white without this
+            sprite_delete(im[|s-1])
+            surface_reset_target()
+            im[|s-1] = sprite_create_from_surface(surf, 0, 0, w, h, false, false, sprite_get_xoffset(s - 1), sprite_get_yoffset(s - 1));
+            surface_free(surf)
+            var url = string(pll[|irandom_range(0,ds_list_size(pll)-1)])
+            show_debug_message(url)
+             ds_list_add(im,sprite_add(url,0,false,false,0,0))
+    }
+    else
+    {
+        for(var i = 0; i &lt; s;++i)
+        {
+            //sprite_
+            sprite_assign(i,im[|i])
+            //show_debug_message(i)
+            //sprite_assign(0,im[|1])
+            //sprite_delete(im[|i])
+        }
+    }
+    }
+   }
 </string>
           </argument>
         </arguments>
@@ -102,7 +216,7 @@ else if room = mainmenu or room = level_select or room = credits
     if !audio_is_playing(menumusic)
     {
         audio_stop_all()
-        audio_play_sound(menumusic, 1, true)
+        audio_play_sound_on(global.music,menumusic, 1, true)
     }
 }
 else if room &lt; tut2
@@ -110,7 +224,7 @@ else if room &lt; tut2
     if !audio_is_playing(music1)
     {
         audio_stop_all()
-        audio_play_sound(music1, 1, true)
+        audio_play_sound_on(global.music,music1, 1, true)
     }
 }
 else if room &lt; levelnext
@@ -118,7 +232,7 @@ else if room &lt; levelnext
     if !audio_is_playing(music2)
     {
         audio_stop_all()
-        audio_play_sound(music2, 1, true)
+        audio_play_sound_on(global.music,music2, 1, true)
     }   
 }
 else
@@ -126,7 +240,7 @@ else
     if !audio_is_playing(bossloop)
     {
         audio_stop_all()
-        audio_play_sound(bossloop, 1, true)
+        audio_play_sound_on(global.music, bossloop, 1, true)
     }   
 }
 ///save furthest room
@@ -186,7 +300,7 @@ draw_set_color(c_black)
 if mouse_check_button(mb_left) and point_in_rectangle(mouse_x,mouse_y,room_width * .2 - 15,yy - 20,room_width * .8 + 15, yy + 25)
 {
     global.effects_volume = clamp((mouse_x - room_width * .2)/(room_width * .6),0,1)
-    audio_master_gain(global.effects_volume)
+    audio_emitter_gain(global.effects, global.effects_volume)
     save()
 }
 draw_rectangle(room_width * .2, yy, room_width * .8, yy + 5,false)
@@ -198,7 +312,7 @@ yy += sprite_get_height(musicmenu) + 40
 if mouse_check_button(mb_left) and point_in_rectangle(mouse_x,mouse_y,room_width * .2 - 15,yy - 20,room_width * .8 + 15, yy + 25)
 {
     global.music_volume = clamp((mouse_x - room_width * .2)/(room_width * .6),0,1)
-    audio_master_gain(global.music_volume)
+    audio_emitter_gain(global.music, global.music_volume)
     save()
 }
 draw_rectangle(room_width * .2, yy, room_width * .8, yy + 5,false)

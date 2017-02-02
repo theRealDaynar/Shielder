@@ -54,8 +54,9 @@ spd = 4
 turn_speed = 0
 turn_stop = 0
 event_perform(ev_other,ev_end_of_path)
-audio_stop_sound(bossloop)
-audio_play_sound(music3,1,true)
+audio_stop_all()
+audio_sound_set_track_position(music3, 38.5)
+audio_play_sound_on(global.music,music3,1,true)
 
 </string>
           </argument>
