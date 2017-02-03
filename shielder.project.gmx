@@ -14,6 +14,7 @@
     <sound>sound\jump</sound>
     <sound>sound\landing</sound>
     <sound>sound\jingle</sound>
+    <sound>sound\footstep</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
@@ -25,6 +26,7 @@
     <sprite>sprites\shield</sprite>
     <sprite>sprites\sFirstBossKillZone</sprite>
     <sprite>sprites\dust</sprite>
+    <sprite>sprites\dust2</sprite>
     <sprite>sprites\wall2</sprite>
     <sprite>sprites\deathwall</sprite>
     <sprite>sprites\wall3</sprite>
