@@ -25,10 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>start_time = get_timer()
-//number of seconds in timer
+            <string>//number of seconds in timer
 var seconds = 60
-end_time = seconds * 1000000
+end_time = seconds * 60
 x = room_width/2 //replace with view variables if views are being used
 y = 100
 font = TIMER_FONT
@@ -55,7 +54,7 @@ pulse_modifier = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (end_time - (get_timer() - start_time)) &lt; 0 {room_restart()}
+            <string>if (--end_time ) &lt; 0 {room_restart()}
 
 amounty1=-5+round(random(10))
 amountx1=-5+round(random(10))
@@ -104,9 +103,8 @@ view_wview[0]+=1}
             <string>draw_set_halign(fa_center)
 draw_set_valign(fa_center)
 draw_set_font(font)
-var time_left = end_time - (get_timer() - start_time)
-var scale = 3 + pulse_modifier * (time_left % 1000000) / 1000000
-draw_text_transformed_colour(x,y,time_left / 1000000,scale,scale,0,c_red,c_red,c_red,c_red,1)
+var scale = 3 + pulse_modifier * (end_time % 60) / 60
+draw_text_transformed_colour(x,y,end_time / 60,scale,scale,0,c_red,c_red,c_red,c_red,1)
 </string>
           </argument>
         </arguments>

@@ -236,8 +236,8 @@ if (place_meeting(x,y+vsp,objwall2))
     }
     if vsp &gt; 0
     audio_play_sound_on(global.effects,landing,false,1);
-    repeat(3) instance_create(x+ random_range(-20, 16), y+28, objdustr); 
-    repeat(3) instance_create(x+ random_range(-16, 20), y+28, objdustl);
+    repeat(3) instance_create(x+ random_range(-20, 16), y+28 * sign(vsp), objdustr); 
+    repeat(3) instance_create(x+ random_range(-16, 20), y+28 * sign(vsp), objdustl);
     vsp = 0;
 }
 y += vsp;

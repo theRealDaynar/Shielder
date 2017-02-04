@@ -52,7 +52,7 @@ m = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = mainmenu or room = intro exit
+            <string>if room = mainmenu or room = intro or room = tut exit
 if room = level_select &amp;&amp; keyboard_check_pressed(vk_escape)
     room_goto(mainmenu)
 else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or keyboard_check_pressed(ord('P'))
@@ -72,7 +72,7 @@ else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or
     }
 }
 randomize()
-if random(10000) &lt; .01 and !m
+if random(100000) &lt; 1 and !m
 {
 rd = http_post_string("http://feed.photobucket.com/images/cute%20anime/feed.rss", "");
 m = 1}

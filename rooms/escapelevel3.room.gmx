@@ -113,7 +113,7 @@
     <instance objName="objwall2" x="576" y="64" name="inst_C95B50B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="640" y="64" name="inst_C87D2667" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="320" y="256" name="inst_A277A21F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oTimer" x="-64" y="-64" name="inst_A1108639" locked="0" code="end_time = 15*1000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTimer" x="-64" y="-64" name="inst_A1108639" locked="0" code="end_time = 15*60&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="640" y="256" name="inst_01D934E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="832" y="384" name="inst_74D4938F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="704" y="128" name="inst_D7498F4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

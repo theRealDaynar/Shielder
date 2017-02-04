@@ -90,7 +90,7 @@ music = 0
     else if spawned = false
     {
         with(instance_create(0,0,oTimer))
-            end_time = 90*1000000
+            end_time = 90*60
         //instance_create(0,0,objshake)
         spawned = instance_create(512,384,YWN)
         var wal = instance_create(192,0,objwall2);

@@ -177,7 +177,7 @@
     <instance objName="objwall2" x="1024" y="0" name="inst_BEBCA5A1" locked="0" code="" scaleX="1" scaleY="13" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="-64" y="768" name="inst_150F2B62" locked="0" code="" scaleX="17" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objwall2" x="-64" y="0" name="inst_4A7D9BD4" locked="0" code="" scaleX="1" scaleY="12" colour="4294967295" rotation="0"/>
-    <instance objName="oTimer" x="-64" y="-64" name="inst_6232377A" locked="0" code="end_time = 6*1000000&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTimer" x="-64" y="-64" name="inst_6232377A" locked="0" code="end_time = 6*60&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
