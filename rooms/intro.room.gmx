@@ -12,6 +12,8 @@
   <showcolour>-1</showcolour>
   <code>randomize()
 globalvar TIMER_FONT;
+globalvar loop;
+loop = false;
 TIMER_FONT = font_add_sprite_ext(sFont, "1234567890.", false,2)
 draw_set_colour($4B4B4B)
 global.effects = audio_emitter_create()
