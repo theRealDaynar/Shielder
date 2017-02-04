@@ -10,7 +10,7 @@
   <bbox_left>10</bbox_left>
   <bbox_right>245</bbox_right>
   <bbox_top>31</bbox_top>
-  <bbox_bottom>1456</bbox_bottom>
+  <bbox_bottom>1924</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>256</width>
-  <height>1810</height>
+  <height>2024</height>
   <frames>
     <frame index="0">images\sprcredits_0.png</frame>
   </frames>
