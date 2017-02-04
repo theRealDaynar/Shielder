@@ -195,6 +195,7 @@
       <room>rooms\levelboss</room>
       <room>rooms\credits</room>
     </rooms>
+    <room>rooms\level_select</room>
     <rooms name="world2">
       <room>rooms\level10</room>
       <room>rooms\level11</room>
@@ -204,7 +205,6 @@
       <room>rooms\leveld</room>
       <room>rooms\foreshadowing</room>
     </rooms>
-    <room>rooms\level_select</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
