@@ -251,7 +251,7 @@ sprite_index = sPlayerRightUp
 else
 sprite_index = sPlayerRight
 image_speed = .2
-if image_index = 1 {audio_play_sound(footstep,0,0); repeat(2) instance_create(x+ random_range(-20, 16), y+28, objdust)}
+if image_index = 1 {audio_play_sound_on(global.effects,footstep,0,0); repeat(2) instance_create(x+ random_range(-20, 16), y+28, objdust)}
 }
 else if (keyboard_check(ord('A'))) and (facing != 2) {facing = 1
 if sprite_index != sPlayerLeft and sprite_index != sPlayerLeftUp
@@ -261,7 +261,7 @@ sprite_index = sPlayerLeftUp
 else
 sprite_index = sPlayerLeft
 image_speed = .2
-if image_index = 1 {audio_play_sound(footstep,0,0); repeat(2) instance_create(x, y+28, objdust)}
+if image_index = 1 {audio_play_sound_on(global.effects,footstep,0,0); repeat(2) instance_create(x, y+28, objdust)}
 }
 else
 sprite_index = player
@@ -279,20 +279,10 @@ if (facing = 1) and (!keyboard_check(ord('D'))) {image_index = 1}
 
 if keyboard_check(ord("A")) and !keyboard_check(ord("D"))
 {
-    if vsp &lt; 0 
-        image_index = 14
-    else if vsp &gt; 0
-        image_index = 16
-    else
         image_index = 5
 }
 else if !keyboard_check(ord("A")) and keyboard_check(ord("D"))
 {
-    if vsp &lt; 0 
-        image_index = 13
-    else if vsp &gt; 0
-        image_index = 15
-    else
         image_index = 4
 }
 
@@ -314,6 +304,12 @@ if (keyboard_check(ord('S'))) and (facing = 1) and (place_meeting(x,y+1,objwall2
 //if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (facing = 0) {instance_create(x-8,y+32,objdustl)}
 //if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('A'))) and (facing = 1) {instance_create(x+8,y+32,objdustr)}
 if (place_meeting(x,y+1,objwall2)) and (keyboard_check(ord('D'))) and (keyboard_check(ord('A'))) {facing = 2}
+
+if !keyboard_check(ord('W')) and !keyboard_check(ord('S'))
+{if vsp &lt; 0 
+    image_index = 13 + facing
+else if vsp &gt; 0 or !place_meeting(x,y+1,objwall2)
+    image_index = 15 + facing}
 </string>
           </argument>
         </arguments>

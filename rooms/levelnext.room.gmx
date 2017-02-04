@@ -3,7 +3,7 @@
   <caption></caption>
   <width>1024</width>
   <height>832</height>
-  <vsnap>64</vsnap>
+  <vsnap>32</vsnap>
   <hsnap>64</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
@@ -211,7 +211,7 @@
     <instance objName="objplayer" x="256" y="0" name="inst_C426F605" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objbrknwall2" x="192" y="768" name="inst_E008B9A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objbrknwall2" x="192" y="832" name="inst_0048AB47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objglow" x="192" y="808" name="inst_FC514C3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objglow" x="192" y="800" name="inst_FC514C3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objbrknwall2" x="320" y="768" name="inst_EB04B11A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objbrknwall2" x="192" y="640" name="inst_80205FF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objbrknwall2" x="256" y="640" name="inst_7F5C73CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

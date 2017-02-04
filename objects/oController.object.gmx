@@ -28,6 +28,7 @@
             <string>pause_snapshot = noone
 music = noone
 im = ds_list_create()
+m = false
 
 </string>
           </argument>
@@ -71,9 +72,10 @@ else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or
     }
 }
 randomize()
-if random(100) &lt; .0001
+if random(10000) &lt; .01 and !m
+{
 rd = http_post_string("http://feed.photobucket.com/images/cute%20anime/feed.rss", "");
-
+m = 1}
 </string>
           </argument>
         </arguments>

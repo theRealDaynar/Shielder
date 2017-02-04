@@ -55,8 +55,8 @@ turn_speed = 0
 turn_stop = 0
 event_perform(ev_other,ev_end_of_path)
 audio_stop_all()
-audio_sound_set_track_position(music3, 38.5)
-audio_play_sound_on(global.music,music3,1,true)
+loop = false
+
 
 </string>
           </argument>
@@ -421,9 +421,12 @@ repeat(4)
         turn_speed = 0
     }
 }
-
-
-
+if !audio_is_playing(music3)
+{
+    audio_sound_set_track_position(music3, 3.5 + loop * 35)
+    loop = (!loop)
+    audio_play_sound_on(global.music,music3,false,1)
+}
 /*if stage =  0 {path_start(boss1, 4, 1, true); stage = 1}
 if stage =  2 {path_start(boss1, 6, 1, false); stage = 3}
 if stage =  4 {path_start(boss1, 8, 1, false); stage = 5}
