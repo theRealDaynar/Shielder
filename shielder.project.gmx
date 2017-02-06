@@ -15,6 +15,10 @@
     <sound>sound\landing</sound>
     <sound>sound\jingle</sound>
     <sound>sound\footstep</sound>
+    <sound>sound\select</sound>
+    <sound>sound\explosionsound</sound>
+    <sound>sound\bossnoise</sound>
+    <sound>sound\bossnoise2</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprwall</sprite>
@@ -195,7 +199,6 @@
       <room>rooms\levelboss</room>
       <room>rooms\credits</room>
     </rooms>
-    <room>rooms\level_select</room>
     <rooms name="world2">
       <room>rooms\level10</room>
       <room>rooms\level11</room>
@@ -205,6 +208,7 @@
       <room>rooms\leveld</room>
       <room>rooms\foreshadowing</room>
     </rooms>
+    <room>rooms\level_select</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

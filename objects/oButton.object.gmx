@@ -72,7 +72,7 @@ image_speed = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(objbulletL) image_speed = 0.1
+            <string>if !instance_exists(objbulletL) {image_speed = 0.1; audio_play_sound_on(global.effects,select,0,0)}
 </string>
           </argument>
         </arguments>

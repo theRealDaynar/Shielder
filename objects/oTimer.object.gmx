@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//number of seconds in timer
+if instance_exists(objexplosion) audio_play_sound_on(global.effects,explosionsound,0,0)
 var seconds = 60
 end_time = seconds * 60
 x = room_width/2 //replace with view variables if views are being used
@@ -78,6 +79,9 @@ else
 if(view_xview[0]&lt;0){
 view_xview[0]+=1
 view_wview[0]+=1}
+
+if random(12) &lt; 1 and instance_exists(objexplosion) 
+{audio_play_sound_on(global.effects,explosionsound,0,0)}
 </string>
           </argument>
         </arguments>

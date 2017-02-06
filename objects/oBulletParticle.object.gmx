@@ -28,7 +28,6 @@
             <string>gravity = 2
 image_blend = 0
 audio_play_sound_on(global.effects,ricochet1,0,0)
-
 </string>
           </argument>
         </arguments>

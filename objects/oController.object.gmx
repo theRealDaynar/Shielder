@@ -72,7 +72,7 @@ else if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape) or
     }
 }
 randomize()
-if random(500) &lt; 1 and !m
+/*if random(1000000) &lt; 1 and !m
 {
 rd = http_post_string("http://feed.photobucket.com/images/cute%20anime/feed.rss", "");
 m = 1}
